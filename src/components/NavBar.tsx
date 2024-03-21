@@ -1,43 +1,64 @@
 
 "use client";
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import MyContainer from './MyContainer';
 import { usePathname } from 'next/navigation';
+import { FiMenu } from "react-icons/fi";
+import { RxCross2 } from "react-icons/rx";
+import "./style.css";
 
-
-const NavBar =  ()  => {
+const NavBar = () => {
     const pathname = usePathname();
-    
+
+    const [isOpen, setIsOpen] = useState<Boolean>(false);
+
+    const navItems = <>
+        <li className='transition-all duration-100 hover:border-b-2 cursor-pointer'>
+            <Link className={`${pathname === "/" ? "text-black" : "text-white"} font-primaryFont`} href="/">Home</Link>
+        </li>
+        <li className='transition-all duration-100 hover:border-b-2 cursor-pointer'>
+            <Link className={`${pathname === "/contact" ? "text-black" : "text-white"} font-primaryFont`} href="/contact">Contact</Link>
+        </li>
+        <li className='transition-all duration-100 hover:border-b-2 cursor-pointer'>
+            <Link className={`${pathname === "/about" ? "text-black" : "text-white"} font-primaryFont`} href="/about">About Us</Link>
+        </li>
+        <li className='transition-all duration-100 hover:border-b-2 cursor-pointer'>
+            <Link className={`${pathname === "/donate" ? "text-black" : "text-white"} font-primaryFont`} href="/donate">Donate</Link>
+        </li>
+        <li className='transition-all duration-100 hover:border-b-2 cursor-pointer'>
+            <Link className={`${pathname === "/quiz" ? "text-black" : "text-white"} font-primaryFont`} href="/quiz">Spiritual Quiz</Link>
+        </li>
+    </>;
+
+    const handleOpenMenu = () => {
+        setIsOpen(!isOpen);
+    }
+
     return (
         <div className='bg-[#97afa3]'>
             <MyContainer>
-                <div className='text-red-500 flex justify-center relative items-center md:py-7
-         py-5'>
+                <div className='flex md:justify-center justify-between relative items-center md:py-7
+                sm:py-5 py-3'>
 
-
-                    <div className='absolute left-5'>
+                    <div className='md:absolute relative left-0'>
                         <Image className='md:w-14 w-10' width={200} height={100} src={"https://selfrealization.in/wp-content/uploads/2022/04/cropped-1-2-120x122.png"} alt='Logo' />
                     </div>
 
-                    <ul className='flex gap-5 text-2xl font-semibold text-white'>
-                        <li>
-                            <Link className={pathname === "/" ? "text-black" : ""} href="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link className={pathname === "/contact" ? "text-black" : ""} href="/contact">Contact</Link>
-                        </li>
-                        <li>
-                            <Link className={pathname === "/about" ? "text-black" : ""} href="/about">About Us</Link>
-                        </li>
-                        <li>
-                            <Link className={pathname === "/donate" ? "text-black" : ""} href="/donate">Donate</Link>
-                        </li>
-                        <li>
-                            <Link className={pathname === "/quiz" ? "text-black" : ""} href="/quiz">Spiritual Quiz</Link>
-                        </li>
+                    <ul className='md:flex hidden gap-10 text-3xl font-semibold text-white'>
+                        {navItems}
                     </ul>
+
+                    <div className='md:hidden block'>
+                        <button onClick={handleOpenMenu}>
+                            {isOpen ? <RxCross2 className='sm:text-3xl text-2xl' /> : <FiMenu className='sm:text-3xl text-2xl' />} 
+                        </button>
+
+                        <ul id='dropdown-container' className={`transition-all duration-500 text-xl ${isOpen ? "h-auto w-auto" : "h-0 w-0"} overflow-hidden`}>
+                            {navItems}
+                        </ul>
+                    </div>
                 </div>
             </MyContainer>
         </div>
