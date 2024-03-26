@@ -15,20 +15,20 @@ const NavBar = () => {
     const [isOpen, setIsOpen] = useState<Boolean>(false);
 
     const navItems = <>
-        <li className='transition-all hover:bg-black rounded-md duration-100 menu-item cursor-pointer'>
-            <Link className={`${pathname === "/" ? "text-black" : "text-white"} font-primaryFont`} href="/">Home</Link>
+        <li className='transition-all hover:bg-black text-white rounded-md duration-100 menu-item cursor-pointer'>
+            <Link className={`${pathname === "/" ? "bg-black" : "text-white"} font-primaryFont px-2 rounded-lg`} href="/">Home</Link>
         </li>
-        <li className='transition-all hover:bg-black rounded-md duration-100 menu-item cursor-pointer'>
-            <Link className={`${pathname === "/contact" ? "text-black" : "text-white"} font-primaryFont`} href="/contact">Contact</Link>
+        <li className='transition-all hover:bg-black text-white rounded-md duration-100 menu-item cursor-pointer'>
+            <Link className={`${pathname === "/contact" ? "bg-black" : "text-white"} font-primaryFont px-2 rounded-lg`} href="/contact">Contact</Link>
         </li>
-        <li className='transition-all hover:bg-black rounded-md duration-100 menu-item cursor-pointer'>
-            <Link className={`${pathname === "/about" ? "text-black" : "text-white"} font-primaryFont`} href="/about">About Us</Link>
+        <li className='transition-all hover:bg-black text-white rounded-md duration-100 menu-item cursor-pointer'>
+            <Link className={`${pathname === "/about" ? "bg-black" : "text-white"} font-primaryFont px-2 rounded-lg`} href="/about">About Us</Link>
         </li>
-        <li className='transition-all hover:bg-black rounded-md duration-100 menu-item cursor-pointer'>
-            <Link className={`${pathname === "/donate" ? "text-black" : "text-white"} font-primaryFont`} href="/donate">Donate</Link>
+        <li className='transition-all hover:bg-black text-white rounded-md duration-100 menu-item cursor-pointer'>
+            <Link className={`${pathname === "/donate" ? "bg-black" : "text-white"} font-primaryFont px-2 rounded-lg`} href="/donate">Donate</Link>
         </li>
-        <li className='transition-all hover:bg-black rounded-md duration-100 menu-item cursor-pointer'>
-            <Link className={`${pathname === "/quiz" ? "text-black" : "text-white"} font-primaryFont`} href="/quiz">Spiritual Quiz</Link>
+        <li className='transition-all hover:bg-black text-white rounded-md duration-100 menu-item cursor-pointer'>
+            <Link className={`${pathname === "/quiz" ? "bg-black" : "text-white"} font-primaryFont px-2 rounded-lg`} href="/quiz">Spiritual Quiz</Link>
         </li>
     </>;
 
@@ -46,7 +46,7 @@ const NavBar = () => {
                         <Image className='md:w-14 w-10' width={200} height={100} src={"https://selfrealization.in/wp-content/uploads/2022/04/cropped-1-2-120x122.png"} alt='Logo' />
                     </div>
 
-                    <ul className='md:flex hidden gap-10 text-3xl font-semibold text-white'>
+                    <ul className='md:flex hidden gap-7 text-3xl font-semibold text-white'>
                         {navItems}
                     </ul>
 
