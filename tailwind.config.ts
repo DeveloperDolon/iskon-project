@@ -10,7 +10,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         primaryFont: ["Cormorant Infant", "serif"],
-        secoundryFont: ["Bonbon", "cursive"]
+        secoundryFont: ["Bonbon", "cursive"],
+        latoFont: ["Lato", "sans-serif"]
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
