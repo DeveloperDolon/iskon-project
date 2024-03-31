@@ -17,7 +17,7 @@ function Footer() {
                         <Image src={"https://selfrealization.in/wp-content/uploads/2022/04/cropped-1-2-120x122.png"} height={100} width={100} alt="logo"/>
                     </div>
                     <div className=" flex flex-col md:items-center f-f-l pt-3 text-white">
-                        <h1 className="text-2xl font-black">ISKON Youth Forum, Barishal, Bangladesh.</h1>
+                        <h1 className="text-2xl font-black">ISKCON Youth Forum, Barishal, Bangladesh.</h1>
                         <div className="md:flex items-center mt-5 md:mt-10 text-base text-color f-f-l">
                             <h2 className=" md:mr-6 pb-4 md:py-0 cursor-pointer">Download Now</h2>
                             <h2 className="cursor-pointer">License</h2>
