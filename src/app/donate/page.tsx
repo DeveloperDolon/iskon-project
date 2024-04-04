@@ -7,6 +7,7 @@ import { FaStar } from "react-icons/fa";
 import "./style.css";
 import { FaBangladeshiTakaSign } from "react-icons/fa6";
 import userIcon from "../../assets/userIcon.png";
+import CourseCard from "@/components/HomeComponent/CourseCard";
 
 const colors = {
     orange: "#FFBA5A",
@@ -36,16 +37,15 @@ const styles = {
         border: "1px solid #a9a9a9",
         borderRadius: 5,
         width: 300,
-        padding: 10,
+        padding: 10
     }
-
 };
 
 const page: React.FC = () => {
-
     const [currentValue, setCurrentValue] = useState<Number>(0);
     const [hoverValue, setHoverValue] = useState<Number>(0);
     const stars = Array(5).fill(0);
+
 
     const handleClick = (value: number) => {
         setCurrentValue(value);
@@ -172,6 +172,14 @@ const page: React.FC = () => {
 
                         <button type="submit" className="font-latoFont font-semibold uppercase md:text-lg text-base mt-8 bg-blue-700 text-white md:py-2 py-1 md:px-4 px-3 rounded-full hover:opacity-60 transition-all duration-300">Submit</button>
                     </form>
+                </div>
+
+                <div className="md:mt-10 sm:mt-8 mt-6 grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-5">
+                    <CourseCard/>
+                    <CourseCard/>
+                    <CourseCard/>
+                    <CourseCard/>
+                    <CourseCard/>
                 </div>
             </MyContainer>
         </>

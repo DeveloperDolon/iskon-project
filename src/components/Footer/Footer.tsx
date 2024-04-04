@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React from "react";
+import logoImage from "../../assets/logo.jpg";
+import Link from "next/link";
 function Footer() {
     return (
         <>
@@ -14,7 +16,7 @@ function Footer() {
                 <div 
                 className="mx-auto container relative md:mt-32 mt-20 flex flex-col items-center justify-center  md:py-20 py-16">
                     <div>
-                        <Image src={"https://selfrealization.in/wp-content/uploads/2022/04/cropped-1-2-120x122.png"} height={100} width={100} alt="logo"/>
+                        <Image src={logoImage} height={100} className="rounded-full" width={100} alt="logo"/>
                     </div>
                     <div className=" flex flex-col md:items-center f-f-l pt-3 text-white">
                         <h1 className="text-2xl font-black">ISKCON Youth Forum, Barishal, Bangladesh.</h1>
@@ -24,7 +26,11 @@ function Footer() {
                         </div>
                         <div className="my-6 text-base text-color f-f-l">
                             <ul className="md:flex items-center">
-                                <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">About</li>
+                                <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">
+                                    <Link href={"/about"}>
+                                        About
+                                    </Link>    
+                                </li>
                                 <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Features</li>
                                 <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Pricing</li>
                                 <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Careers</li>
