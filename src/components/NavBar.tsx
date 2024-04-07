@@ -7,6 +7,7 @@ import MyContainer from './MyContainer';
 import { usePathname } from 'next/navigation';
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
+import logo from '../assets/logo.jpg';
 import "./style.css";
 
 const NavBar = () => {
@@ -42,8 +43,9 @@ const NavBar = () => {
                 <div className='flex md:justify-center justify-between relative items-center md:py-7
                 sm:py-5 py-3'>
 
-                    <div className='md:absolute relative left-0'>
-                        <Image className='md:w-14 w-10' width={200} height={100} src={"https://selfrealization.in/wp-content/uploads/2022/04/cropped-1-2-120x122.png"} alt='Logo' />
+                    <div className='md:absolute relative left-0 flex gap-3 items-center'>
+                        <Image className='md:w-14 w-10 rounded-full' width={200} height={100} src={logo} alt='Logo' />
+                        <h2 className='md:text-xl text-lg font-semibold font-latoFont'>IYF Barishal</h2>
                     </div>
 
                     <ul className='md:flex hidden gap-7 text-3xl font-semibold text-white'>
