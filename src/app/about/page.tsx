@@ -1,6 +1,7 @@
 import MyContainer from "@/components/MyContainer";
 
 import AboutTitle from "../../components/AboutTitle/AboutTitle";
+
 const page = () => {
     return (
         <>

@@ -29,7 +29,7 @@ const NavBar = () => {
             <Link className={`${pathname === "/donate" ? "bg-black" : "text-white"} font-primaryFont px-2 rounded-lg`} href="/donate">Donate</Link>
         </li>
         <li className='transition-all hover:bg-black text-white rounded-md duration-100 menu-item cursor-pointer'>
-            <Link className={`${pathname === "/quiz" ? "bg-black" : "text-white"} font-primaryFont px-2 rounded-lg`} href="/quiz">Spiritual Quiz</Link>
+            <Link className={`${pathname === "/spiritual-quiz" ? "bg-black" : "text-white"} font-primaryFont px-2 rounded-lg`} href="/spiritual-quiz">Spiritual Quiz</Link>
         </li>
     </>;
 
