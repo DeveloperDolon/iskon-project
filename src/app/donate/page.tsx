@@ -173,13 +173,8 @@ const page: React.FC = () => {
                         <button type="submit" className="font-latoFont font-semibold uppercase md:text-lg text-base mt-8 bg-blue-700 text-white md:py-2 py-1 md:px-4 px-3 rounded-full hover:opacity-60 transition-all duration-300">Submit</button>
                     </form>
                 </div>
-
-                <div className="md:mt-10 sm:mt-8 mt-6 grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-5">
-                    <CourseCard/>
-                    <CourseCard/>
-                    <CourseCard/>
-                    <CourseCard/>
-                    <CourseCard/>
+                <div className="border-t-2 pt-2">
+                    There will be some feature in future.
                 </div>
             </MyContainer>
         </>
