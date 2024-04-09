@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import logo from '../assets/logo.jpg';
+import bgm from "../assets/bgm.mp3";
 import "./style.css";
 
 const NavBar = () => {
@@ -37,24 +38,31 @@ const NavBar = () => {
         setIsOpen(!isOpen);
     }
 
+    const play = () => {
+        const audio = new Audio(bgm);
+        audio.loop = true;
+        audio.play();
+    }
+
     return (
         <div className='bg-[#97afa3]'>
             <MyContainer>
+                <button onClick={() => play()}>Play</button>
                 <div className='flex md:justify-center justify-between relative items-center md:py-7
                 sm:py-5 py-3'>
 
                     <div className='md:absolute relative left-0 flex gap-3 items-center'>
                         <Image className='md:w-14 w-10 rounded-full' width={200} height={100} src={logo} alt='Logo' />
-                        <h2 className='md:text-xl text-lg font-semibold font-latoFont'>IYF Barishal</h2>
+                        <h2 className='md:text-xl text-lg font-semibold font-latoFont lg:block md:hidden block'>IYF Barishal</h2>
                     </div>
 
-                    <ul className='md:flex hidden gap-7 text-3xl font-semibold text-white'>
+                    <ul className='md:flex hidden gap-7 xl:text-3xl text-xl font-semibold text-white'>
                         {navItems}
                     </ul>
 
                     <div className='md:hidden block'>
                         <button onClick={handleOpenMenu}>
-                            {isOpen ? <RxCross2 className='sm:text-3xl text-2xl' /> : <FiMenu className='sm:text-3xl text-2xl' />} 
+                            {isOpen ? <RxCross2 className='sm:text-3xl text-2xl' /> : <FiMenu className='sm:text-3xl text-2xl' />}
                         </button>
 
                         <ul id='dropdown-container' className={`transition-all duration-500 text-xl ${isOpen ? "h-auto w-auto" : "h-0 w-0"} overflow-hidden`}>
