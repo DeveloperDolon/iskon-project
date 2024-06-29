@@ -33,12 +33,12 @@ const NavBar = () => {
             <Link className={`${pathname === "/spiritual-quiz" ? "bg-black" : "text-white"} font-primaryFont px-2 rounded-lg`} href="/spiritual-quiz">Spiritual Quiz</Link>
         </li>
     </>;
-
-    const handleOpenMenu = () => {
+    
+    const handleOpenMenu = () : void => {
         setIsOpen(!isOpen);
     }
 
-    const play = () => {
+    const play = () : void => {
         const audio = new Audio(bgm);
         audio.loop = true;
         audio.play();
