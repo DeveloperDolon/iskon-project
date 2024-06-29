@@ -1,10 +1,11 @@
+"use client";
 import { configureStore } from "@reduxjs/toolkit";
 import baseApi from "./features/baseApi";
-import userSlice from "./features/users/userSlice";
+// import userSlice from "./features/userAuth.ts";
 
 export const store = configureStore({
   reducer: {
-    userSlice: userSlice,
+    // userSlice: userSlice,
     [baseApi.reducerPath]: baseApi.reducer,
   },
 
